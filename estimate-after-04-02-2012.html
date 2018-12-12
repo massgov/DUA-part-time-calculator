@@ -67,8 +67,11 @@
     <span class="style13">I Agree, continue filling out form </span></p>
   <nav role="navigation">
     <ol>
-      <li><span class="style14"><strong>Enter</strong> your benefits determination (the amount you receive in UI every week)</strong> of annual regular compensation. (omit $ sign, commas; for example 32000 or 102900.98) $</span>
+      <li><span class="style14"><strong>Enter</strong> your benefits determination (the amount you receive in UI every week). (omit $ sign, commas; for example 32000 or 102900.98) $</span>
         <input title="Enter your benefits determination" type="TEXT" name="YRAverageSalary" id="YRAverageSalary" disabled onChange="validateYRAverageSalary(this),computeForm(yaC6690.value, BenefAgeYY.value, BenefAgeMM.value, militaryveteran.value, AmountOptionA.value, YRAverageSalary.value)" size="10" maxlength="10" align="right">
+      </li>
+	<li><span class="style14"><strong>Enter</strong> your part-time work earnings (the amount you receive from your part-time job every week). (omit $ sign, commas; for example 32000 or 102900.98) $</span>
+        <input title="Enter your benefits determination" type="TEXT" name="YRAverageSalary2" id="YRAverageSalary2" disabled onChange="validateYRAverageSalary2(this),computeForm(yaC6690.value, BenefAgeYY.value, BenefAgeMM.value, militaryveteran.value, AmountOptionA.value, YRAverageSalary2.value)" size="10" maxlength="10" align="right">
       </li>
     </ol>
   </nav>
@@ -78,7 +81,7 @@
   <nav role="navigation">
     <ol>
       <li>
-        <div align="left" class="style14">Age at retirement:
+        <div align="left" class="style14">Total weekly take-home amount: $
           <input title="Age at retirement" type="TEXT" name="yaAdisplayonly" id="yaAdisplayonly" size="10" maxlength="10" align="right" readonly disabled>
           <input title="Group member text" name="grpmember" type="hidden" id="grpmember" size="10" maxlength="10" align="right" readonly>
           <input title="Age for calculation for Option A text" type="hidden" name="yaA" id="yaA" size="15" maxlength="10" align="right" readonly>
@@ -87,7 +90,7 @@
         </div>
       </li><br>
       <li>
-        <div align="left" class="style14">Years of Creditable Service display:
+        <div align="left" class="style14">UI weekly take-home amount: $
           <input title="Year of creditable service" name="OpAyaservicedisplay" type="TEXT" id="OpAyaservicedisplay" size="10" maxlength="10" align="right" readonly disabled>
           <input title="Year of creditable service and veterant bonus text" name="OpAyaservice" type="hidden" id="OpAyaservice" size="15" maxlength="10" align="right" readonly >
           <input title="Year of creditable service and veterant calculation text" name="OpAyaserviceVeteran" type="hidden" id="OpAyaserviceVeteran" size="15" maxlength="10" align="right" readonly >
@@ -95,7 +98,7 @@
         <div align="left"></div>
       </li><br>
       <li>
-        <div align="left" class="style14">Allowable % of Salary Average:
+        <div align="left" class="style14">Weekly part-time earnings: $
           <input title="Allowable % of Salary Average" name="PercentFactor" type="TEXT" id="PercentFactor" size="10" maxlength="10" align="right" readonly disabled>
         </div>
       </li><br>
@@ -127,41 +130,6 @@
   </nav>
   <nav role="navigation">
     <p>Option B.</p>
-    <ol>
-      <li>Annual Allowance: <span class="style14">&nbsp;$
-        <input title="Estimated Option B annual allowance" name="txtOptionB" type="TEXT" id="txtOptionB" size="10" maxlength="10" align="right" readonly disabled>
-        <input title="Estimated Option B annual allowance before veteran benefit text" name="txtOptionBbeforeVeteranBenf" type="hidden" id="txtOptionBbeforeVeteranBenf" size="15" maxlength="10" align="right" readonly>
-        </span></li><br>
-      <li>Monthly Allowance: <span class="style14">$
-        <input title="Estimated Option B monthly allowance" name="txtOptionBmonthly" type="TEXT" id="txtOptionBmonthly" size="10" maxlength="10" align="right" readonly disabled>
-        </span></li>
-      <li>*Beneficiary Annual Allowance<span class="style14">: Balance Annuity Reserve Account, if any </span></li>
-      <li><span class="style14">*Beneficiary Monthly Allowance</span>:<span class="style14"> Balance Annuity Reserve Account, if any </span></li>
-    </ol>
-  </nav>
-  <nav role="navigation">
-    <p>Option C.</p>
-    <ol>
-      <li>Annual Allowance: <span class="style14">&nbsp;$
-        <input title="Estimated Option C annual allowance" type="text" name="myResultOptionC" id="myResultOptionC" onClick="computeForm(this)" size="10" maxlength="10" align="right" readonly disabled>
-        <input title="Age for calculation Option C text" name="yaCfromYadisplay" type="hidden" id="yaCfromYadisplay" size="15" maxlength="10" align="right" readonly>
-        <input title="Age for calculation Option C text" name="yaC" type="hidden" id="yaC" size="15" maxlength="10" align="right" readonly>
-        <input title="Estimated Option C annual allowance text" name="AmountOptionAC" type="hidden" id="AmountOptionAC" size="10" maxlength="10" align="right" readonly>
-        <input title="Estimated Option C annual allowance before veteran benefit text" name="AmountOptionACbeforeVeteranBenf" type="hidden" id="AmountOptionACbeforeVeteranBenf" size="15" maxlength="10" align="right" readonly>
-        <input title="Estimated Option C factor percent in decimal text" type="hidden" name="myResultOptionCfator" id="myResultOptionCfator" size="10" maxlength="10" align="right" readonly>
-        </span></li><br>
-      <li>Monthly Allowance: <span class="style14">$
-        <input title="Estimated Option C monthly allowance" type="text" name="myResultOptionCmonthly" id="myResultOptionCmonthly" onClick="computeForm(this)" size="10" maxlength="10" align="right" readonly disabled>
-        </span></li><br>
-      <li>*Beneficiary Annual Allowance<span class="style14">: </span><span class="style14">&nbsp;$
-        <input title="Two thirds of estimated Option C annual allowance" type="text" name="myResultOptionCTwoThirdYearly" id="myResultOptionCTwoThirdYearly" onClick="computeForm(this)" size="10" maxlength="10" align="right" readonly disabled>
-        <input title="Beneficiary's age year text" type="hidden" id="yaBenydispay" name="yaBenydispay" onClick="computeForm(this)" size="4" maxlength="4" readonly align="right">
-                <input title="Beneficiary's age in month text" type="hidden" id="maBenydisplay" name="maBenydisplay" onClick="computeForm(this)" size="3" maxlength="2" readonly align="right">
-        <input title="Beneficiary's age text" type="hidden" name="OptCbenfAge" id="OptCbenfAge" onClick="computeForm(this)" size="15" maxlength="10" align="right" readonly>
-        </span></li><br>
-      <li><span class="style14">*Beneficiary Monthly Allowance</span>:<span class="style14"> $
-        <input title="Two thirds of estimated Option C monthly allowance" type="text" name="myResultOptionCTwoThirdMonthly" id="myResultOptionCTwoThirdMonthly" onClick="computeForm(this)" size="10" maxlength="10" align="right" readonly disabled>
-        </span></li>
     </ol>
     <hr size="1">
     <p align="center" class="style6">SERVE&nbsp;&nbsp; &loz;&nbsp;&nbsp; CONTRIBUTE &nbsp;&nbsp;&loz; &nbsp;&nbsp;RETIRE </p>
