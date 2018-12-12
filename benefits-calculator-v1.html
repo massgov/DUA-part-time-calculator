@@ -64,7 +64,7 @@
         <input title="Enter your part-time earnings" type="number" name="pt_earnings" id="pt_earnings" size="10" maxlength="10" align="right">
       	</li>
 	   </ol>	    
-	  
+	  <button onclick="calcBenefits()">Compute</button>
     <label>Estimated take-home amount</label>
  <strong>REMINDER: If you work part-time hours during weeks in which you request unemployment benefits, you may still be paid benefits if your gross wages (total wages before taxes are deducted) are less than your weekly benefit amount. Any earnings greater than 1/3 of your weekly benefit amount (known as your earnings disregard) will be deducted dollar-for-dollar from your weekly benefit payment.</strong>
   <div>&nbsp;</div>
@@ -72,18 +72,18 @@
     <ol>
       <li>
         <div align="left" class="style14">Total weekly take-home amount: $
-          <input title="Total weekly take-home amount" type="number" name="tot_take_home" id="tot_take_home" size="10" maxlength="10" align="right">
+          <input title="Total weekly take-home amount" type="number" name="take_home" id="take_home" size="10" maxlength="10" align="right">
         </div>
       </li><br>
       <li>
         <div align="left" class="style14">UI weekly take-home amount: $
-          <input title="UI weekly take-home amount" name="ui_take_home" type="number" id="ui_take_home" size="10" maxlength="10" align="right">
+          <input title="UI weekly take-home amount" name="benefits" type="number" id="benefits" size="10" maxlength="10" align="right">
         </div>
         <div align="left"></div>
       </li><br>
       <li>
         <div align="left" class="style14">Weekly part-time earnings: $
-          <input title="Weekly part-time earnings" name="pt_earnings" type="number" id="pt_earnings" size="10" maxlength="10" align="right">
+          <input title="Weekly part-time earnings" name="earnings" type="number" id="earnings" size="10" maxlength="10" align="right">
         </div>
       </li><br>
           </ol>
