@@ -60,7 +60,9 @@
 	<li>Enter your benefits determination (the amount you receive in UI every week). (omit $ sign, commas; for example 32000 or 102900.98) $
         <input title="Enter your benefits determination" type="number" name="benefits_determination" id="YRAverageSalary">
      	</li>
-	   
+	<li><span class="style14"><strong>Enter</strong> your part-time work earnings (the amount you receive from your part-time job every week). (omit $ sign, commas; for example 32000 or 102900.98) $</span>
+        <input title="Enter your benefits determination" type="TEXT" name="YRAverageSalary2" id="YRAverageSalary2" disabled onChange="validateYRAverageSalary2(this),computeForm(yaC6690.value, BenefAgeYY.value, BenefAgeMM.value, militaryveteran.value, AmountOptionA.value, YRAverageSalary2.value)" size="10" maxlength="10" align="right">
+      	</li>
 	   <input type="radio"  name="selectedcake" value="Round6"
     onclick="calculateTotal()" />
     Round cake 6" -  serves 8 people ($20)
