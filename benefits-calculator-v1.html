@@ -52,58 +52,70 @@
  </head> 
    <body>    
 <!--Estimator codes begin-->
-<noscript>
-<p class="style1"><strong>This site requires Javascript. Please enable Javascript in your browser or switch to a browser that supports Javascript in order to view this site.</strong></p>
-</noscript>
-<form id="frmCal" name="frmCal" method="POST" onsubmit="return checkForm(this)" action="">
-<hr size="1">
-  <span class="style13">Calculate Your Estimated UI Benefits</span>
-  <nav role="navigation">
-    <ol>
-      <li><span class="style14"><strong>Enter</strong> your benefits determination (the amount you receive in UI every week). (omit $ sign, commas; for example 32000 or 102900.98) $</span>
-        <input title="Enter your benefits determination" type="TEXT" name="YRAverageSalary" id="YRAverageSalary" disabled onChange="validateYRAverageSalary(this),computeForm(yaC6690.value, BenefAgeYY.value, BenefAgeMM.value, militaryveteran.value, AmountOptionA.value, YRAverageSalary.value)" size="10" maxlength="10" align="right">
-      </li>
-	<li><span class="style14"><strong>Enter</strong> your part-time work earnings (the amount you receive from your part-time job every week). (omit $ sign, commas; for example 32000 or 102900.98) $</span>
-        <input title="Enter your benefits determination" type="TEXT" name="YRAverageSalary2" id="YRAverageSalary2" disabled onChange="validateYRAverageSalary2(this),computeForm(yaC6690.value, BenefAgeYY.value, BenefAgeMM.value, militaryveteran.value, AmountOptionA.value, YRAverageSalary2.value)" size="10" maxlength="10" align="right">
-      </li>
-    </ol>
-  </nav>
-  <hr size="1">
-  <strong>REMINDER: If you work part-time hours during weeks in which you request unemployment benefits, you may still be paid benefits if your gross wages (total wages before taxes are deducted) are less than your weekly benefit amount. Any earnings greater than 1/3 of your weekly benefit amount (known as your earnings disregard) will be deducted dollar-for-dollar from your weekly benefit payment.</strong>
-  <div>&nbsp;</div>
-  <nav role="navigation">
-    <ol>
-      <li>
-        <div align="left" class="style14">Total weekly take-home amount: $
-          <input title="Age at retirement" type="TEXT" name="yaAdisplayonly" id="yaAdisplayonly" size="10" maxlength="10" align="right" readonly disabled>
-          <input title="Group member text" name="grpmember" type="hidden" id="grpmember" size="10" maxlength="10" align="right" readonly>
-          <input title="Age for calculation for Option A text" type="hidden" name="yaA" id="yaA" size="15" maxlength="10" align="right" readonly>
-          <input title="Age for calculation for Option C text" type="hidden" name="yaC6690"  id="yaC6690" size="15" maxlength="10" align="right" readonly>
-          <input title="Option A Age factor text" name="AgeFactor" type="hidden" id="AgeFactor" size="10" maxlength="10" align="right" readonly>
-        </div>
-      </li><br>
-      <li>
-        <div align="left" class="style14">UI weekly take-home amount: $
-          <input title="Year of creditable service" name="OpAyaservicedisplay" type="TEXT" id="OpAyaservicedisplay" size="10" maxlength="10" align="right" readonly disabled>
-          <input title="Year of creditable service and veterant bonus text" name="OpAyaservice" type="hidden" id="OpAyaservice" size="15" maxlength="10" align="right" readonly >
-          <input title="Year of creditable service and veterant calculation text" name="OpAyaserviceVeteran" type="hidden" id="OpAyaserviceVeteran" size="15" maxlength="10" align="right" readonly >
-        </div>
-        <div align="left"></div>
-      </li><br>
-      <li>
-        <div align="left" class="style14">Weekly part-time earnings: $
-          <input title="Allowable % of Salary Average" name="PercentFactor" type="TEXT" id="PercentFactor" size="10" maxlength="10" align="right" readonly disabled>
-        </div>
-      </li><br>
-          </ol>
-    <hr size="1">
-    <p align="center" class="style6">SERVE&nbsp;&nbsp; &loz;&nbsp;&nbsp; CONTRIBUTE &nbsp;&nbsp;&loz; &nbsp;&nbsp;RETIRE </p>
-    <p class="style14"> If you are within 120 days to your retirement date, contact the State Board of Retirement to speak with one of our retirement counselors and start planning your retirement. The State Board of Retirement strongly recommends that you plan your retirement and that you file at least 30 days in advance of leaving your job. Certain retirement options will not be available to you once you stop working. To contact the State Retirement Board call 617-367-7770 (Boston Office), 413-730-6135 (Springfield Office) or 800-392-6014 (in MA only). Additionally, you can visit the retirement board during its walk-in hours, Monday-Friday, 10am-3pm. Please note, the Board does not make appointments. Thank you</p>
-    <p align="left" class="style14">*Beneficiary Allowance payable only upon death of retiree. If beneficiary predeceases retiree with option C, retiree&rsquo;s pension amount will be increased to option A. </p>
-  </nav>
-  <!--Estimator codes ends-->
+<form action="" id="benCalc" onsubmit="return false;">
+   <fieldset>
+    <legend>Calculate your UI benefits when working part-time</legend>
+    <label>Size Of the Cake</label>
+    
+	<li>Enter your benefits determination (the amount you receive in UI every week). (omit $ sign, commas; for example 32000 or 102900.98) $
+        <input title="Enter your benefits determination" type="number" name="benefits_determination" id="YRAverageSalary">
+     	</li>
+	   
+	   <input type="radio"  name="selectedcake" value="Round6"
+    onclick="calculateTotal()" />
+    Round cake 6" -  serves 8 people ($20)
+    <input type="radio"  name="selectedcake" value="Round8"
+    onclick="calculateTotal()" />
+    Round cake 8" - serves 12 people ($25)
+    <input type="radio"  name="selectedcake" value="Round10"
+    onclick="calculateTotal()" />
+    Round cake 10" - serves 16 people($35)
+    <input type="radio"  name="selectedcake" value="Round12"
+    onclick="calculateTotal()" />
+    Round cake 12" - serves 30 people($75)
+ 
+    <label >Filling</label>
+ 
+    <select id="filling" name='filling'
+    onchange="calculateTotal()">
+    <option value="None">Select Filling</option>
+    <option value="Lemon">Lemon($5)</option>
+    <option value="Custard">Custard($5)</option>
+    <option value="Fudge">Fudge($7)</option>
+    <option value="Mocha">Mocha($8)</option>
+    <option value="Raspberry">Raspberry($10)</option>
+    <option value="Pineapple">Pineapple($5)</option>
+    <option value="Dobash">Dobash($9)</option>
+    <option value="Mint">Mint($5)</option>
+    <option value="Cherry">Cherry($5)</option>
+    <option value="Apricot">Apricot($8)</option>
+    <option value="Buttercream">Buttercream($7)</option>
+    <option value="Chocolate Mousse">Chocolate Mousse($12)</option>
+   </select>
+    <br/>
+    <p>
+    <label for='includecandles' class="inlinelabel">
+    Include Candles($5)</label>
+    <input type="checkbox" id="includecandles" name='includecandles'
+    onclick="calculateTotal()" />
+   </p>
+ 
+    <p>
+    <label class="inlinelabel" for='includeinscription'>
+    Include Inscription($20)</label>
+    <input type="checkbox" id="includeinscription"
+    name="includeinscription" onclick="calculateTotal()" />
+ 
+    <input type="text"  id="theinscription"
+    name="theinscription" value="Enter Inscription"  />
+    </p>
+    <div id="totalPrice"></div>
+ 
+    </fieldset>
 </form>
- <!--Mayflower assets --> 
+	   
+	   
+<!--Mayflower assets --> 
      <script src="https://s3.amazonaws.com/mayflower.digital.mass.gov/assets/js/vendor-generated.js"></script> 
      <script src="https://s3.amazonaws.com/mayflower.digital.mass.gov/assets/js/index-generated.js"></script> 
  
