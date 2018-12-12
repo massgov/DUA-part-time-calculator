@@ -4,7 +4,6 @@ function getBenefits()
 {
     //Assume form with id="benCalc"
     var theForm = document.forms["benCalc"];
-    //Get a reference to the TextBox
     var benefits_determination = theForm.elements["benefits_determination"];
     var benefits = 0;
     //If the textbox is not blank
@@ -19,7 +18,6 @@ function getEarnings()
 {
     //Assume form with id="benCalc"
     var theForm = document.forms["benCalc"];
-    //Get a reference to the TextBox
     var pt_earnings = theForm.elements["pt_earnings"];
     var earnings = 0;
     //If the textbox is not blank
@@ -45,11 +43,6 @@ function calcBenefits()
         var benefits = getBenefits();
         var earnings = getEarnings();
         var take_home = benefits + earnings;
-    
-    //display the result
-    document.getElementById('totalPrice').innerHTML =
-                                      "Total Price For Cake $"+cakePrice;
- 
 }
 
         
