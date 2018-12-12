@@ -42,10 +42,15 @@ function calcBenefits()
         var take_home = benefits + earnings;
  }
  else
+ {
         var benefits = getBenefits();
         var earnings = getEarnings();
         var take_home = benefits + earnings;
 }
-
+    document.getElementById('earnings').value = earnings
+    document.getElementById('benefits').value = benefits
+    document.getElementById('take_home').value = take_home
+    console.log(benefits)
+}
         
         
