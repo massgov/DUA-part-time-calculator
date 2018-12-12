@@ -11,6 +11,7 @@ function getBenefits()
     {
         benefits = parseInt(benefits_determination.value);
     }
+    console.log(benefits);
 return benefits;
 }
 
@@ -25,6 +26,7 @@ function getEarnings()
     {
         earnings = parseInt(pt_earnings.value);
     }
+    console.log(earnings);
 return earnings;
 }
 
