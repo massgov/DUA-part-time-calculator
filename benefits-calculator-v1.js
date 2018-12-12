@@ -50,7 +50,7 @@ function calcBenefits()
     document.getElementById('earnings').value = earnings
     document.getElementById('benefits').value = benefits
     document.getElementById('take_home').value = take_home
-    console.log(benefits)
+    console.log((1/3)*(benefits))
 }
         
         
