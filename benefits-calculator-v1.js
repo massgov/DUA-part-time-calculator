@@ -63,7 +63,7 @@ function calcBenefits()
         var earnings = getEarnings();
         var take_home = benefits + earnings;
 }
-    document.getElementById('earnings_disregard').value = earnings_disregard
+    //document.getElementById('earnings_disregard').value = earnings_disregard
     document.getElementById('earnings').value = earnings
     document.getElementById('benefits').value = benefits
     document.getElementById('take_home').value = take_home
