@@ -15,18 +15,6 @@ function getBenefits()
 return benefits;
 }
 
-function getDisregard()
-{
-    //If the textbox is not blank
-    var earnings_disregard = 0
-    if(getBenefits() != 0)
-    {
-        earnings_disregard = (1/3) * getBenefits();
-    }
-    console.log(earnings_disregard);
-return earnings_disregard;
-}
-
 function getEarnings()
 {
     //Assume form with id="benCalc"
@@ -42,29 +30,25 @@ function getEarnings()
 return earnings;
 }
 
+
 function calcBenefits()
 {
     //Here we get the total price by calling our function
     //Each function returns a number so by calling them we add the values they return together
     if (getEarnings() > ((1/3) * (getBenefits())))
     {
-        //var earnings_disregard = getDisregard()
         var benefits = getBenefits() - (getEarnings() - ((1/3) * (getBenefits())));
         var earnings = getEarnings();
         var take_home = benefits + earnings;
  }
  else
  {
-        //var earnings_disregard = getDisregard()   
         var benefits = getBenefits();
         var earnings = getEarnings();
         var take_home = benefits + earnings;
 }
-    //document.getElementById('earnings_disregard').value = earnings_disregard
     document.getElementById('earnings').value = earnings
     document.getElementById('benefits').value = benefits
     document.getElementById('take_home').value = take_home
     console.log((1/3)*(benefits))
 }
-        
-        
