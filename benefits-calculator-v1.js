@@ -26,8 +26,8 @@ function getDisregard()
     {
         earnings_disregard = (1/3) * parseInt(benefits_determination.value);
     }
-    console.log(benefits);
-return benefits;
+    console.log(earnings_disregard);
+return earnings_disregard;
 }
 
 function getEarnings()
@@ -58,6 +58,7 @@ function calcBenefits()
  }
  else
  {
+        var earnings_disregard = getDisregard()   
         var benefits = getBenefits();
         var earnings = getEarnings();
         var take_home = benefits + earnings;
