@@ -17,14 +17,11 @@ return benefits;
 
 function getDisregard()
 {
-    //Assume form with id="benCalc"
-    var theForm = document.forms["benCalc"];
-    var benefits_determination = theForm.elements["benefits_determination"];
-    var earnings_disregard = 0;
     //If the textbox is not blank
-    if(benefits_determination.value != "")
+    var earnings_disregard = 0
+    if(getBenefits() != 0)
     {
-        earnings_disregard = (1/3) * parseInt(benefits_determination.value);
+        earnings_disregard = (1/3) * getBenefits();
     }
     console.log(earnings_disregard);
 return earnings_disregard;
