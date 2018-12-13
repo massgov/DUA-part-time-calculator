@@ -51,14 +51,14 @@ function calcBenefits()
     //Each function returns a number so by calling them we add the values they return together
     if (getEarnings() > ((1/3) * (getBenefits())))
     {
-        var earnings_disregard = getDisregard()
+        //var earnings_disregard = getDisregard()
         var benefits = getBenefits() - (getEarnings() - ((1/3) * (getBenefits())));
         var earnings = getEarnings();
         var take_home = benefits + earnings;
  }
  else
  {
-        var earnings_disregard = getDisregard()   
+        //var earnings_disregard = getDisregard()   
         var benefits = getBenefits();
         var earnings = getEarnings();
         var take_home = benefits + earnings;
