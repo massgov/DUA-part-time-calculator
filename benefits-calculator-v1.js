@@ -39,18 +39,18 @@ function calcBenefits()
     {
         var disregard = getBenefits() / 3;
         var benefits = getBenefits() - (getEarnings() - ((1/3) * (getBenefits())));
-        var earnings = getEarnings();
+        //var earnings = getEarnings();
         var take_home = benefits + earnings;
  }
  else
  {
         var disregard = getBenefits() / 3;
         var benefits = getBenefits();
-        var earnings = getEarnings();
+        //var earnings = getEarnings();
         var take_home = benefits + earnings;
 }
     document.getElementById('disregard').value = disregard
-    document.getElementById('earnings').value = earnings
+    //document.getElementById('earnings').value = earnings
     document.getElementById('benefits').value = benefits
     document.getElementById('take_home').value = take_home
     console.log((1/3)*(benefits))
